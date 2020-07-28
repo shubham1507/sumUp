@@ -29,7 +29,7 @@ preshed==3.0.2
 psycopg2==2.7.4
 pycorenlp==0.3.0
 pycparser==2.20
-
+whitenoise==2.0.6
 python-dateutil==2.8.1
 pytz==2020.1
 requests==2.23.0
