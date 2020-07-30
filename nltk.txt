@@ -1,4 +1,2 @@
 corpus
 tokenize
-import nltk
-nltk.download()
