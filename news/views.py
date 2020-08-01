@@ -3,26 +3,26 @@ from pprint import pprint
 from .models import Document
 from django.shortcuts import render
 from django.http import HttpResponse
-from .Scraping.Scraping import bbc_scraping, cnn_scraping, nagarik_scraping
+#from .Scraping.Scraping import bbc_scraping, cnn_scraping, nagarik_scraping
 from .forms import DocumentForm
 from django.conf import settings
 from .pdf_summarizer import summarize_pdf
 
 
 def index(request):
-    if request.method == 'GET':
-        source = request.GET.get('source')
-        news = []
-        if source == "'BBC'":
-            news = bbc_scraping()
-        elif source == "'CNN'":
-            news = cnn_scraping()
-        elif source == "'Nagarik'":
-            news = nagarik_scraping()
+#     if request.method == 'GET':
+#         source = request.GET.get('source')
+#         news = []
+#         if source == "'BBC'":
+#             news = bbc_scraping()
+#         elif source == "'CNN'":
+#             news = cnn_scraping()
+#         elif source == "'Nagarik'":
+#             news = nagarik_scraping()
 
-        context = {'source': source, 'news': news}
-        return render(request, 'news/news.html', context)
-
+#         context = {'source': source, 'news': news}
+#         return render(request, 'news/news.html', context)
+    pass
 
 def file_form_upload(request):
     if request.method == 'POST':
